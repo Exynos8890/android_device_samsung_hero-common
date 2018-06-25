@@ -92,9 +92,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	dtbhtoolExynos
 
-# Remove unwanted packages
+# IRQs
 PRODUCT_PACKAGES += \
-    RemovePackages
+	irqbalance
+
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/hardware/irqbalance/irqbalance.conf:system/vendor/etc/irqbalance.conf
 
 # Inherit board specific products
 -include $(LOCAL_PATH)/product/*.mk
