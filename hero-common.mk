@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	dtbhtoolExynos
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # IRQs
 PRODUCT_PACKAGES += \
 	irqbalance
