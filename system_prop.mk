@@ -25,7 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=192m \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapminfree=2m \
     dalvik.vm.heapmaxfree=8m
 
 # Network
@@ -48,6 +48,27 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1
+
+# Performance and battery
+PRODUCT_PROPERTY_OVERRIDES += \
+	wifi.supplicant_scan_interval=300 \
+	persist.sys.purgeable_assets=1 \
+	persist.service.pcsync.enable=0 \
+	persist.service.lgospd.enable=0 \
+	profiler.force_disable_err_rpt=1 \
+	profiler.force_disable_ulog=1 \
+	ro.config.nocheckin=1 \
+	ro.kernel.android.checkjni=0 \
+	persist.sys.use_dithering=0 \
+	ro.kernel.checkjni=0 \
+	debug.kill_allocating_task=0 \
+	ro.debuggable=1 \
+	dalvik.vm.checkjni=false \
+	debugtool.anrhistory=0 \
+	profiler.debugmonitor=false \
+	profiler.launch=false \
+	profiler.hung.dumpdobugreport=false \
+	persist.sys.scrollingcache=3
 
 # test prop
 PRODUCT_PROPERTY_OVERRIDES += \
